@@ -7,7 +7,7 @@
 <!-- default file list end -->
 # GridView - How to track ClientLayout with a separate ListBox
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t146962)**
+**[[Run Online]](https://codecentral.devexpress.com/t146962/)**
 <!-- run online end -->
 
 
