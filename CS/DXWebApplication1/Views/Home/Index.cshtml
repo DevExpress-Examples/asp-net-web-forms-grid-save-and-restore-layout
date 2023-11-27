@@ -17,6 +17,7 @@
 
 @Html.DevExpress().ListBox(settings => {
     settings.Name = "lb";
+    settings.Width = 400px;
     settings.Properties.EnableClientSideAPI = true;
     settings.Properties.ClientSideEvents.SelectedIndexChanged = "OnSelectedIndexChanged";
 }).GetHtml()
