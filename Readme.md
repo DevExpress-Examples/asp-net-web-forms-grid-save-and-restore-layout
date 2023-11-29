@@ -8,13 +8,13 @@
 **[[Run Online]](https://codecentral.devexpress.com/t146962/)**
 <!-- run online end -->
 
-This example demonstrates how to save and restore client layouts of the grid. The modified layouts are stored in a [ListBox](https://docs.devexpress.com/AspNetMvc/8990/components/data-editors-extensions/listbox) editor.
+This example demonstrates how to save and restore grid layouts created by end-users. These modified layouts are stored in a [ListBox](https://docs.devexpress.com/AspNetMvc/8990/components/data-editors-extensions/listbox) editor.
 
 ![](grid-client-layout-in-listbox.png)
 
 ## Implementation Details
 
-1. Handle the [GridViewSettings.CustomJSProperties](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.CustomJSProperties) event and call the [MVCxGridView.SaveClientLayout](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBase.SaveClientLayout) method to save the currently applied client layout.
+1. Handle the [GridViewSettings.CustomJSProperties](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.CustomJSProperties) event and call the [MVCxGridView.SaveClientLayout](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBase.SaveClientLayout) method to save the currently applied layout.
 
   ```csharp
   settings.CustomJSProperties = (s, e) => {
@@ -23,7 +23,7 @@ This example demonstrates how to save and restore client layouts of the grid. Th
   };
   ```
 
-2. Handle [ASPxClientGridView.Init](https://docs.devexpress.com/AspNet/js-ASPxClientControlBase.Init) and [ASPxClientGridView.EndCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.EndCallback) events to store the currently applied client layout in ListBox.
+2. Handle [ASPxClientGridView.Init](https://docs.devexpress.com/AspNet/js-ASPxClientControlBase.Init) and [ASPxClientGridView.EndCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.EndCallback) events to store the currently applied layout in ListBox.
 
   ```jscript
   function OnInit(s, e) {
@@ -39,7 +39,7 @@ This example demonstrates how to save and restore client layouts of the grid. Th
   }
   ```
    
-3. Handle the [ASPxClientListBox.SelectedIndexChanged](https://docs.devexpress.com/AspNet/js-ASPxClientListBox.SelectedIndexChanged) event to perform a custom grid callback (call the [MVCxClientGridView.PerformCallback(data)](https://docs.devexpress.com/AspNetMvc/js-MVCxClientGridView.PerformCallback(data)) method) when the selected item changes. Pass the selected client layout to the method as a parameter.
+3. Handle the [ASPxClientListBox.SelectedIndexChanged](https://docs.devexpress.com/AspNet/js-ASPxClientListBox.SelectedIndexChanged) event to perform a custom grid callback (call the [MVCxClientGridView.PerformCallback(data)](https://docs.devexpress.com/AspNetMvc/js-MVCxClientGridView.PerformCallback(data)) method) when the selected item changes. Pass the end-user's selected layout to the method as a parameter.
 
   ```jscript
   function OnSelectedIndexChanged(s, e) {
@@ -77,5 +77,5 @@ This example demonstrates how to save and restore client layouts of the grid. Th
 
 ## More Examples
 
-* [Grid View for ASP.NET Web Forms - How to use a list box editor to save and restore client layout](https://github.com/DevExpress-Examples/asp-net-web-forms-grid-use-listbox-to-save-and-restore-client-layout)
-* [Grid View for ASP.NET MVC - How to save and restore client layout within a session](https://github.com/DevExpress-Examples/asp-net-mvc-grid-save-restore-client-layout-within-a-session)
+* [Grid View for ASP.NET Web Forms - How to use a list box editor to save and restore grid layouts created by end-users](https://github.com/DevExpress-Examples/asp-net-web-forms-grid-use-listbox-to-save-and-restore-client-layout)
+* [Grid View for ASP.NET MVC - How to save and restore layouts created by end-users within a session](https://github.com/DevExpress-Examples/asp-net-mvc-grid-save-restore-client-layout-within-a-session)
