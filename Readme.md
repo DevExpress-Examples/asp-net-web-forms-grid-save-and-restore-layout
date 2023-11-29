@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Grid View for ASP.NET MVC - How to use a list box editor to save and restore client layout
+# Grid View for ASP.NET MVC - How to use a list box editor to save and restore end-user layouts
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t146962/)**
 <!-- run online end -->
