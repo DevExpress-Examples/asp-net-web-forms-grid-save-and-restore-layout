@@ -47,7 +47,7 @@ This example demonstrates how to save and restore grid layouts created by end-us
   }
   ```
 
-4. Handle the custom grid callback in a separate Action method. Retrieve the client layout to be applied, and save this value in `ViewData`.
+4. Handle the custom grid callback in a separate Action method. Retrieve the  layout the end-user wants to appy and save this value in `ViewData`.
 
   ```csharp
   public ActionResult GridViewPartialCustom(string layoutToApply) {
