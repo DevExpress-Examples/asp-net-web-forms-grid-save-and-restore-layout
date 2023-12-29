@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Grid View for ASP.NET MVC - How to use a list box editor to save and restore end-user layouts
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128550770/)**
-<!-- run online end -->
 
 This example demonstrates how to save and restore grid layouts created by end-users. These modified layouts are stored in a [ListBox](https://docs.devexpress.com/AspNetMvc/8990/components/data-editors-extensions/listbox) editor.
 
